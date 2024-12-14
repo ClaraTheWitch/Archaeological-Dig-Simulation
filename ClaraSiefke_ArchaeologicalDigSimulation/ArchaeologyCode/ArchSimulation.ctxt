@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ArchSimulation
+comment0.text=\n\ \ Archaeological\ Dig\:<br>\n\n\ \ An\ <code>ArchSimulation</code>\ object\ controls\ the\ simulation\n\ \ of\ digging\ around\ artifacts\ in\ an\ archaeological\ dig.\n\n\ \ @author\ Alyce\ Brady\n\ \ @version\ June\ 04,\ 2024\n
+comment1.params=grid
+comment1.target=void\ startSimulation(edu.kzoo.grid.Grid)
+comment1.text=Starts\ or\ restarts\ the\ application.\ *
+comment2.params=loc
+comment2.target=void\ dig(edu.kzoo.grid.Location)
+comment2.text=\ Handles\ a\ mouse\ click\ on\ a\ location\ of\ the\ grid.\n
+comment3.params=
+comment3.target=boolean\ simulationOver()
+comment3.text=Returns\ true\ if\ the\ simulation\ is\ over;\ otherwise,\ returns\ false.\ *
+comment4.params=
+comment4.target=boolean\ digSuccessful()
+comment4.text=\ Returns\ true\ if\ the\ simulation\ is\ over\ and\ the\ user\ successfully\n\ \ identified\ all\ artifact\ locations\ without\ damaging\ any;\n\ \ false\ otherwise.\n
+numComments=5

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=DummyArchSimulation
+comment0.text=\n\ \ Archaeological\ Dig\:<br>\n\n\ \ The\ <code>DummyArchSimulation</code>\ object\ controls\ the\n\ \ simulation\ of\ digging\ around\ artifacts\ in\ an\ archaeological\ dig.\n\n\ \ @author\ Alyce\ Brady\ and\ Clara\ Siefke\ with\ assistance\ from\ Jackson\ \n\ \ \ \ \ \ \ \ \ \ Kiino-Terburg\n\ \ @version\ June\ 04,\ 2024\n
+comment1.params=grid
+comment1.target=void\ startSimulation(edu.kzoo.grid.Grid)
+comment1.text=Starts\ or\ restarts\ the\ application.\ *
+comment2.params=loc
+comment2.target=void\ dig(edu.kzoo.grid.Location)
+comment2.text=\ Handles\ a\ mouse\ click\ on\ a\ location\ of\ the\ grid.\n\ @param\ \ loc\ \ the\ location\ that\ has\ been\ clicked\ on\n
+comment3.params=
+comment3.target=boolean\ simulationOver()
+comment3.text=\ Returns\ true\ if\ the\ simulation\ is\ over;\ otherwise,\ returns\ false.\ \n\ @return\ \ a\ boolean\ representing\ whether\ the\ simulation\ is\ over\n
+comment4.params=
+comment4.target=boolean\ digSuccessful()
+comment4.text=\ Returns\ true\ if\ the\ simulation\ is\ over\ and\ the\ user\ successfully\n\ \ identified\ all\ artifact\ locations\ without\ damaging\ any;\n\ \ false\ otherwise.\n
+comment5.params=grid
+comment5.target=void\ generateArtifacts(edu.kzoo.grid.Grid)
+comment5.text=\ Generates\ and\ adds\ a\ random\ number\ of\ artifacts\ between\ 5\ and\ 10%\ of\ the\ grid\n\ \n
+comment6.params=grid
+comment6.target=void\ generateCounters(edu.kzoo.grid.Grid)
+comment6.text=\ Fills\ the\ non\ empty\ spaces\ the\ grid\ with\ bomb\ counter\ blocks\n\ \n
+numComments=7

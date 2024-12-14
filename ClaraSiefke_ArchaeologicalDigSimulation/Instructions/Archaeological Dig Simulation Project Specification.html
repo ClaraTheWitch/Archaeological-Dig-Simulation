@@ -1,0 +1,236 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+
+    <title>Archaeological Dig Simulation Project Specification</title>
+    <link href="mailto:abrady@kzoo.edu">
+    <link rel="STYLESHEET" type="text/css" href="Archaeological%20Dig%20Simulation%20Project%20Specification_files/styles.css">
+</head>
+<body>
+
+<script type="text/javascript" src="Archaeological%20Dig%20Simulation%20Project%20Specification_files/siteTitle.js"></script><nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"><a class="navbar-brand" href="https://www.cs.kzoo.edu/cs150/schedule.html">COMP 150 <span class="modifier">Schedule</span></a> &nbsp;&nbsp;&nbsp;<a class="navbar-brand modifier" href="https://www.cs.kzoo.edu/CollabCenter/">CollaborationCenter</a> &nbsp;&nbsp;&nbsp;<a class="navbar-brand modifier" href="https://kit.cs.kzoo.edu/">Kit</a></nav><header><div class="jumbotron text-center" style="margin-bottom:0; background-color: #FFFFFF"><h1 class="display-3"><span class="keyword">COMP 150</span> Object-Oriented Programming</h1><p class="lead">Spring 2024 <span class="keyword">•</span> Department of Computer Science <span class="keyword">•</span> Kalamazoo College </p></div> <hr> </header>
+
+
+<p>
+</p><div id="pageTitle">
+  <h1>Final Project:<br>
+    Archaeological Dig Simulation</h1>
+</div>
+
+<p>
+</p><hr width="100%">
+
+<p>In this project you will design and implement a modified version of an 
+Archaeological Dig Simulation that behaves a lot like the solitaire computer game
+MineSweeper.</p>
+<h3>Problem Specification:</h3>
+<p>Design a program to simulate an archaeological
+dig. The goal is to dig near ancient artifacts buried in the soil
+to loosen them and make it easy for the archaeologists to
+extract them manually.  If you dig too close to the artifacts, though, you will
+damage them.
+The archaeologists have mapped out the dig site as a grid.
+The chemistry department has come up with a soil test to see whether there 
+are artifacts close by, either in the current grid location or in an adjacent
+location.
+Your job is to dig in the grid blocks
+without artifacts and to leave the blocks with artifacts alone.  Since
+this is such an important project, the archaeological team wants their
+students to be able to practice this before they get to the dig.  You
+are going to write the simulation that the students can use to
+practice.</p>
+<p>
+</p><h3>Program Specification:</h3>
+<ul>
+  <li>  The simulation consists of a square grid representing the dig site.&nbsp; The
+    grid contains artifacts in various locations, and the number and location
+    of the artifacts should change every time the simulation is run.
+   &nbsp; In particular, there
+should be no fewer than 5 artifacts and no more than about 10% of 
+the number of cells in the grid.  Each artifact should be placed at a
+random location in the grid and no two artifacts should be placed at the
+same place.
+  </li><li>When the simulation starts the grid appears
+    empty, representing the site before any digging has taken place.
+    All blocks should be "invisible"; that
+    is, they should not indicate whether they contain an artifact, are
+    adjacent to one or more artifacts, or are nowhere near any artifacts.
+  </li><li>Clicking on a grid block represents digging in that location.
+  When a user clicks on one of the blocks in the grid they are given feedback
+  depending on the contents of the block and its neighbors.  In particular,
+    <ul>
+  <li>If the block contains an artifact, 
+  the display should show the artifact that has been exposed
+  and damaged.&nbsp; This could be done as simply as displaying an "A" for artifact
+  in the grid cell, or by displaying a picture of an artifact. Damaging an artifact
+  ends the simulation.
+  </li><li>If the block does not contain an artifact but is adjacent to one
+  or more blocks that do contain artifacts, the block should display
+  the number of artifacts adjacent to that block.
+  </li><li>If the block does not contain an artifact and the block is not
+  adjacent to any artifacts, the block should indicate that the block is empty.
+The user should be able to visually distinguish between a block where they have
+    dug and found nothing and a block where they have not yet dug; for example,
+    you might display a dash or some other character in blocks where users has
+    dug and found nothing.
+    </li></ul>
+  </li><li>The user continues to click on blocks until they click on an
+  artifact, ending the simulation, or until they have clicked on all the
+    blocks not containing artifacts, successfully completing the dig.
+</li></ul>
+<p>
+</p><h3>Classes to Get Started:</h3>
+<p>Since we have not yet talked in class about how to develop graphical user
+  interfaces, we are providing two classes,
+  <code><a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimGUI.java">ArchSimGUI</a></code>
+  and <code><a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimDisplay.java">ArchSimDisplay</a></code>.&nbsp; The
+  user interface responds to certain user actions, such as pressing the Restart
+  button or clicking the mouse within a cell in the grid, but it does not know
+  what actions to perform when these events occur.&nbsp; It requires a class
+  with which it can interact that does know what actions to perform.&nbsp; Therefore,
+  we have created an interface, <a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimulation.java"><code>ArchSimulation</code></a>,
+  that specifies a set of methods that the GUI can invoke.&nbsp; The display
+  class also has some special requirements; it assumes that the objects in the
+  grid are not just normal <code>GridObject</code> instances, but that they
+  are instances of a class that has an <code>isVisible</code> method so that
+  the display can tell which objects in the display it should show and which
+  should remain hidden.&nbsp; We have provided a skeleton  <a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimGridBlock.java"><code>ArchSimGridBlock</code></a> class
+  that has such a method as well as a method that indicates whether the
+  object is an artifact (each method has stub functionality).
+  Finally, to make
+  it easier for you to get started and to test your program at every step of
+  the way, we have provided two classes, 
+  <a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimApp.java"><code>ArchSimApp</code></a> and
+   <a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/DummyArchSimulation.java"><code>DummyArchSimulation</code></a>,
+  that will allow you to compile and "run" the other classes we have
+  provided.</p>
+<p>In summary, the files being provided to you are:</p>
+<ul>
+  <li><code><a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimApp.java">ArchSimApp</a></code> -
+    the main  application that starts the graphical user interface</li>
+  <li><code><a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimGUI.java">ArchSimGUI.java</a></code> and
+  <code><a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimDisplay.java">ArchSimDisplay.java</a></code> -
+  the class that implement a graphical user interface for the archaeology dig
+  simulation and the class that displays the grid within that user interface</li>
+  <li><code><a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimulation.java">ArchSimulation</a></code> -
+    the interface that specifies the set of methods that the GUI invokes in responding
+    to user events</li>
+  <li><code><a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/DummyArchSimulation.java">DummyArchSimulation</a></code> -
+    a trivial class that provides empty implementations for the methods specified
+    by the <code>ArchSimulation</code> interface; you should leave this
+    class as it is and create a new class that implements the
+    <code>ArchSimulation</code> interface</li>
+  <li><code><a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/JavaSourceFiles/ArchSimGridBlock.java">ArchSimGridBlock</a></code> -
+    an extension of <code>GridObject</code> that provides an <code>isVisible</code> method
+    (actually, this class extends <code>TextCell</code>, so you can use it to
+    put simple strings in the grid); you could add functionality to this class
+    or create subclasses that have the functionality you want</li>
+  <li>
+    <code><a href="https://www.cs.kzoo.edu/GridPkg/grid.jar">grid.jar</a></code>
+    - the Java archive library for the Grid Package, containing classes
+    such as
+    <code>BoundedGrid</code>, <code>GridObject</code>, <code>TextCell</code>,
+    <i>etc</i>.
+    <a href="https://www.cs.kzoo.edu/GridPkg/GridPkgDocs/" target="_blank">Class documentation for all classes in the Grid
+        Package</a> can be found
+    <a href="https://www.cs.kzoo.edu/GridPkg/GridPkgDocs/" target="_blank">here</a>.
+    </li>
+</ul>
+<p>
+</p><h3>Suggestions for Proceeding:</h3>
+<ul>
+<li>The first thing you should do is to become familiar with the classes we have
+  provided, particularly the <code>ArchSimulation</code> interface and  <code>ArchSimGridBlock</code> classes.<br>
+</li><li>Next, you should develop a  design for your simulation program that shows
+  the existing classes and any additional classes you think you will need, what
+  operations they should have, and how you expect them to interact. For example,
+  you
+may wish to have  different classes that represent the different types
+of blocks in the simulation, with shared behavior in a shared superclass.
+ 
+(In order to come up with an appropriate design, you should thoroughly
+understand the problem specification, so make sure you read the rest of
+the assignment before continuing with your design.)<br>
+</li><li>You may wish to begin by placing the artifacts in your grid.
+   Remember that there
+should be no fewer than 5 artifacts and no more than about 10% of 
+the number of cells in the grid.  Each artifact should be placed at a
+random location in the grid and no two artifacts should be placed at the
+same place.  Run the program to test it.&nbsp; For testing purposes, you may
+want to have all your
+artifact blocks visible when first constructed, so that you can see
+where your program is putting them.
+<br>
+</li><li>For each grid location that does not contain an artifact, you should
+count up the number of adjacent artifacts (in other words, the number of
+adjacent blocks that contain an artifact).  Note that the grid object that the
+  <code>ArchSimGUI</code> class passes to an <code>ArchSimulation</code> class
+  considers all <i>eight</i> adjacent
+  locations around a grid cell (including the ones on diagonals)
+to be its neighbors.
+Thus, the number of adjacent artifacts may range from 0 to 8.&nbsp; You may wish
+to put objects representing (and displaying) the neighboring artifact count in
+the grid at the very beginning, before the simulation starts, or you may wish
+to insert them as the user clicks on the corresponding cells.&nbsp; Grid cells
+that have no adjacent artifacts should be visually distinctive from those that
+have adjacent artifacts.&nbsp; Test
+your
+program so far. (Again, you probably want all objects in the grid to be
+visible for this testing.)<br>
+</li><li>Once you can place and display artifacts and can display locations that have
+  been found to be empty (with artifact counts if there are artifacts adjacent
+  to an empty location), then you can modify your program so that the grid appears
+  to be empty when the simulation starts (any objects in it at the start are
+  invisible) and the contents of the various grid
+  blocks are made visible only when the user clicks on the corresponding cell.&nbsp; Test
+  your
+modified program.<br>
+</li><li>Modify your program to indicate that an unsuccessful grid simulation when
+  the user clicks on (digs up and damages) an artifact.&nbsp; Test your program.&nbsp; If
+  you have done this correctly, the graphical user interface should change the
+  background color of the grid and change the window title to be an error message
+  when the user clicks on a hidden artifact.<br>
+</li><li>Enhance your program to recognize a successfully completed dig. If
+  you have done this correctly, the graphical user interface should change the
+  background color of the grid and change the window title to be a congratulatory
+  message when all dig site locations that do not contain artifacts have been
+  explored.<br>
+</li><li>As you go, you should create javadoc documentation for your new classes and
+  methods, and should use comments inside your methods for internal documentation.&nbsp; When
+  you are finished with your project, you should create user documentation for
+  your program that is accessible from the "Help" menu. To
+  do this, you will need to edit the <code>ArchSimApp</code> class, which creates
+  the
+  "Help" menu.&nbsp; Provide the appropriate information for the 
+  author(s), assistance, and date.&nbsp; Then create a document called 
+  <code>ArchDigHelp.html</code> that contains information for users about what
+  the program is, how it works, what it	does, etc.&nbsp; Save this file in the same folder as the <code>.project</code>
+  file.&nbsp; Run the program and test both menu items in the "Help" menu.<br>
+</li><li>You may use any of the classes in the Grid Package (<code><a href="https://www.cs.kzoo.edu/cs150/LabsEtc/FinalPP/Archaeology/grid.jar">grid.jar</a></code>), including<p></p>
+<ul>
+  <li><code>edu.kzoo.grid.TextCell</code> -- a class for  objects containing
+    text that can be put in a grid.&nbsp; The current <code>ArchSimGridBlock</code> class
+     extends <code>TextCell</code>.&nbsp; 
+  </li><li><code>edu.kzoo.grid.GridObject</code> -- the more general class for objects
+    that can be put in a grid.&nbsp; <code>TextCell</code> extends <code>GridObject</code>,
+	as does the <code>ColorBlock</code> class you saw in the GridPlotter project.&nbsp; You
+	may wish to change <code>ArchSimGridBlock</code> to extend <code>GridObject</code> or
+	<code>ColorBlock</code> rather	than <code>TextCell</code> if you don't want to use text strings
+	to	represent	artifacts&nbsp; and empty blocks.
+  </li><li><code>edu.kzoo.grid.Location</code> - this class is
+    exactly the same as the class you are used to from the Marine 
+    Biology Simulation case study.</li>
+    <li><code>edu.kzoo.grid.Grid</code> -- this class is a
+    two-dimensional data structure you can use to simulate your
+    simulation grid.  It has some methods that should be very useful
+    for your implementation of the simulation.
+    </li><li>Documentation for all the Grid Package classes can be found <a href="https://www.cs.kzoo.edu/GridPkg/GridPkgClassDocumentation/index.html">
+    online.</a>
+</li></ul>
+</li></ul>
+
+ <center>
+<hr width="100%">
+</center>
+
+
+</body></html>

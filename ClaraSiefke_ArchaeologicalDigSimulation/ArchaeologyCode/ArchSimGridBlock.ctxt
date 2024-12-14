@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=ArchSimGridBlock
+comment0.text=\n\ \ Archaeological\ Dig\:<br>\n\n\ \ An\ <code>ArchSimGridBlock</code>\ object\ represents\ a\ grid\ block\n\ \ in\ a\ site\ map\ for\ an\ archaeological\ dig.\ \ The\ contents\ of\ the\ grid\n\ \ block\ may\ be\ hidden,\ in\ which\ case\ the\ grid\ display\ should\ not\n\ \ show\ them,\ or\ may\ be\ visible.\n\n\ \ @author\ Alyce\ Brady\ and\ Clara\ Siefke\n\ \ @version\ June\ 04,\ 2024\n
+comment1.params=grid\ loc\ textLabel\ color
+comment1.target=ArchSimGridBlock(edu.kzoo.grid.Grid,\ edu.kzoo.grid.Location,\ java.lang.String,\ java.awt.Color)
+comment1.text=\ Initializes\ a\ new\ ArchSimGridBlock\ object.\n\ \ \ \ @param\ grid\ \ \ \ the\ grid\ in\ which\ to\ place\ this\ grid\ block\n\ \ \ \ @param\ loc\ \ \ \ \ the\ location\ of\ the\ new\ object\ in\ <code>grid</code>\n\ \ \ \ @param\ textLabel\ \ a\ one-\ or\ two-character\ label\ for\ this\ object\n\ \ \ \ @param\ color\ \ \ \ \ \ the\ color\ to\ use\ when\ drawing\ the\ object\n
+comment2.params=
+comment2.target=boolean\ isVisible()
+comment2.text=\ Returns\ true\ if\ what\ is\ in\ this\ grid\ block\ is\ now\ visible\n\ \ (meaning\ that\ archaeologists\ have\ explored\ this\ site\ location);\n\ \ otherwise,\ returns\ false.\n\ \ @return\ \ a\ boolean\ telling\ whether\ the\ object\ is\ visible\n
+comment3.params=
+comment3.target=boolean\ isHidden()
+comment3.text=\ Return\ true\ if\ what\ is\ in\ this\ grid\ block\ is\ still\ hidden;\n\ \ otherwise,\ returns\ false.\n\ \ @return\ \ a\ boolean\ telling\ whether\ the\ object\ is\ hidden\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=
+comment5.target=void\ makeVisible()
+comment5.text=\ Makes\ the\ object\ visible\n\ \n
+numComments=6

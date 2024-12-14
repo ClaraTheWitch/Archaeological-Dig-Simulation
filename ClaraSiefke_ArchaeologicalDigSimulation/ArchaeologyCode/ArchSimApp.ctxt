@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=ArchSimApp
+comment0.text=\n\ \ Archaeological\ Dig\:<br>\n\n\ \ The\ <code>ArchSimApp</code>\ class\ provides\ the\ <code>main</code>\n\ \ method\ for\ a\ simulation\ of\ an\ archaeological\ dig.\n\n\ \ @author\ Alyce\ Brady\ and\ Clara\ Siefke\n\ \ @version\ June\ 04,\ 2024\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

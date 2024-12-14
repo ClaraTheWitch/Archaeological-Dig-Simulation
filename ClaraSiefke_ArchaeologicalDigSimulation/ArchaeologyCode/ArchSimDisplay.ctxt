@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ArchSimDisplay
+comment0.text=\n\ \ Archaeological\ Dig\:<br>\n\n\ \ The\ <code>ArchSimDisplay</code>\ class\ extends\ the\n\ \ <code>ScrollableGridDisplay</code>\ class\ to\ allow\ hidden\n\ \ objects\ to\ not\ be\ displayed.\ \n\n\ \ @author\ Alyce\ Brady\n\ \ @version\ May\ 21,\ 2017\n
+comment1.params=width\ height\ minimumCellSize
+comment1.target=ArchSimDisplay(int,\ int,\ int)
+comment1.text=\ Constructs\ a\ new\ ArchSimDisplay\ object\ with\ no\ grid\n\ \ and\ an\ empty\ view.\n\ \ (Precondition\:\ <code>width</code>\ and\ <code>height</code>\ must\ be\n\ \ at\ least\ as\ large\ as\ <code>minimumCellSize</code>.)\n\ \ \ \ @param\ width\ \ the\ width\ of\ the\ viewing\ area\n\ \ \ \ @param\ height\ the\ height\ of\ the\ viewing\ area\n\ \ \ \ @param\ minimumCellSize\ minimum\ cell\ side\ length\n
+comment2.params=viewingWidth\ viewingHeight\ minimumCellSize\ backgroundColor
+comment2.target=ArchSimDisplay(int,\ int,\ int,\ java.awt.Color)
+comment2.text=\ Constructs\ a\ new\ ArchSimDisplay\ object\ with\ no\ grid\n\ \ and\ an\ empty\ view.\n\ \ (Precondition\:\ <code>width</code>\ and\ <code>height</code>\ must\ be\n\ \ at\ least\ as\ large\ as\ <code>minimumCellSize</code>.)\n\ \ @param\ viewingWidth\ \ the\ width\ of\ the\ viewing\ area\n\ \ @param\ viewingHeight\ the\ height\ of\ the\ viewing\ area\n\ \ @param\ minimumCellSize\ minimum\ cell\ side\ length\n\ \ @param\ backgroundColor\ color\ to\ paint\ background\ of\ grid\n
+comment3.params=g2\ obj
+comment3.target=void\ drawGridObject(java.awt.Graphics2D,\ edu.kzoo.grid.GridObject)
+comment3.text=\ {@inheritDoc}\n
+comment4.params=loc
+comment4.target=void\ updateLocation(edu.kzoo.grid.Location)
+comment4.text=\ {@inheritDoc}\n
+numComments=5

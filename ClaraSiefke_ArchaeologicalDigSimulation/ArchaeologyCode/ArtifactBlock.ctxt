@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ArtifactBlock
+comment0.text=\n\ \ Archaeological\ Dig\:<br>\n\n\ \ An\ <code>ArtifactBlock</code>\ object\ represents\ an\ artifact\ block\n\ \ in\ a\ site\ map\ for\ an\ archaeological\ dig.\ \ The\ contents\ of\ the\ grid\n\ \ block\ may\ be\ hidden,\ in\ which\ case\ the\ grid\ display\ should\ not\n\ \ show\ them,\ or\ may\ be\ visible.\n\n\ \ @author\ Alyce\ Brady\ and\ Clara\ Siefke\n\ \ @version\ May\ 31,\ 2024\n
+comment1.params=grid\ loc
+comment1.target=ArtifactBlock(edu.kzoo.grid.Grid,\ edu.kzoo.grid.Location)
+comment1.text=\ Initializes\ a\ new\ ArtifactBlock\ object.\n\ \ \ \ @param\ grid\ \ \ \ the\ grid\ in\ which\ to\ place\ this\ grid\ block\n\ \ \ \ @param\ loc\ \ \ \ \ the\ location\ of\ the\ new\ object\ in\ <code>grid</code>\n
+comment2.params=grid\ loc\ textLabel\ color
+comment2.target=ArtifactBlock(edu.kzoo.grid.Grid,\ edu.kzoo.grid.Location,\ java.lang.String,\ java.awt.Color)
+comment2.text=\ Initializes\ a\ new\ ArtifactBlock\ object.\n\ \ \ \ @param\ grid\ \ \ \ the\ grid\ in\ which\ to\ place\ this\ grid\ block\n\ \ \ \ @param\ loc\ \ \ \ \ the\ location\ of\ the\ new\ object\ in\ <code>grid</code>\n\ \ \ \ @param\ textLabel\ \ a\ one-\ or\ two-character\ label\ for\ this\ object\n\ \ \ \ @param\ color\ \ \ \ \ \ the\ color\ to\ use\ when\ drawing\ the\ object\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
